@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class SimpleChatBot {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String userInput;
+
+        System.out.println("Привет! Я простой чат-бот. Задайте мне вопрос.");
+        while (true) {
+            System.out.print("Вы: ");
+            userInput = scanner.nextLine().toLowerCase();
+
+            if (userInput.contains("привет")) {
+                System.out.println("Бот: Привет!");
+            } else if (userInput.contains("как дела")) {
+                System.out.println("Бот: У меня всё хорошо, а у вас?");
+            } else if (userInput.contains("пока")) {
+                System.out.println("Бот: До свидания!");
+                break;
+            } else {
+                System.out.println("Бот: Извините, я не понимаю.");
+            }
+        }
+        
+        scanner.close();
+    }
+}
